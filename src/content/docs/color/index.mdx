@@ -1,0 +1,27 @@
+---
+title: Color
+description: Color roles, accessibility requirements, and implementation notes for NJIA materials.
+---
+
+Color choices should support hierarchy, accessibility, and recognition. Treat palette entries as
+roles first and raw values second.
+
+## Initial Roles
+
+| Role | Purpose | Working value |
+| --- | --- | --- |
+| Primary | Navigation, active states, and high-emphasis actions | `#1f63c8` |
+| Primary dark | Header depth, strong type, and dark surfaces | `#06356f` |
+| Support green | Confirmation, progress, and constructive emphasis | `#68b65f` |
+| Neutral ink | Body text and quiet interface structure | `#121820` |
+| Neutral surface | Page backgrounds and subtle panels | `#f8fafc` |
+
+## Accessibility
+
+All foreground and background combinations must meet WCAG contrast requirements before use. Do not
+use color alone to communicate state, category, or priority.
+
+## Needed Decisions
+
+Replace working values with approved brand tokens when the final palette is adopted. Include RGB,
+HEX, CMYK, and usage notes for each production color.

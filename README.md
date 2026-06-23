@@ -1,55 +1,83 @@
-# Innovation Repository Template
+# NJIA Brand Design Guidelines
 
-This repository serves as a template for creating new repositories within the New Jersey State New
-Jersey Innovation Authority. It provides a standardized structure and guidelines to follow when
-developing software or documents.
-
-To get started with this repository, have an Innovation GitHub admin clone this template repository
-for you. We'll need the following information from you:
-
-- the intended name for the GitHub repository
-- the visibility of the repository (public, private, internal)
-- the permissions for the repository, either:
-  - explicit permissions for the new repository
-  - another repository from which we can mirror the permissions
+This repository contains the Starlight documentation site for New Jersey Innovation Authority brand
+design guidelines. The site is the shared home for guidance on brand foundation, logo use, color,
+typography, voice, and approved assets.
 
 ## Table of Contents
 
-1. [Using](#using)
-2. [Contributing](#contributing)
-3. [License](#license)
-4. [Acknowledgements](#acknowledgements)
+1. [Architecture](#architecture)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Contact](#contact)
 
-## Using
+## Architecture
 
-Once this template is mirrored to the new repository, you'll need to perform the following steps:
+The project is a static documentation site built with Astro and Starlight. Guideline pages live in
+`src/content/docs`, global Starlight configuration lives in `astro.config.ts`, and documentation
+collection setup lives in `src/content.config.ts`.
 
-- Delete this `README.md` file, then rename the `README.template.md` file to take its place.
-- Pin the major versions of the packages in `package.json`.
-  - `npm`: `npm update --save`
-  - `yarn` doesn't do this. Reinstall each of the packages.
-  - `pnpm`: `pnpm up -L`
-- Modify the `package.json` file to set the appropriate version and repository information.
-- Update the supported versions in `SECURITY.md`.
+### Built With
+
+- [Astro](https://astro.build)
+- [Starlight](https://starlight.astro.build)
+- [Biome](https://biomejs.dev)
+- [pnpm](https://pnpm.io)
+
+## Installation
+
+```bash
+# Clone this repository
+git clone https://github.com/newjersey/njia-brand-design-guidelines
+
+# Go into the repository
+cd njia-brand-design-guidelines
+
+# Install dependencies
+pnpm install
+```
+
+## Usage
+
+```bash
+# Start the local documentation server
+pnpm run dev
+
+# Run formatting, linting, and Astro type checks
+pnpm run check
+
+# Build the static site
+pnpm run build
+```
 
 ## Contributing
 
-Contributions are welcome!
+Contributions should keep guidance clear, specific, and grounded in approved NJIA brand decisions.
+When adding or changing a guideline, update the relevant page in `src/content/docs` and include
+enough context for future contributors to understand the decision.
 
-1. Clone the repository (`gh repo clone newjersey/innovation-repo-template`)
-2. Create your feature branch (`git checkout -b your_gh_username/NewConfig`)
-3. Commit your changes (`git commit -S -m 'Change some config'`)
-4. Push to the Branch (`git push origin your_gh_username/NewConfig`)
-5. Open a pull request
-6. Post to `#engineering-all` for feedback
+Before opening a pull request, run:
 
-## Acknowledgements
+```bash
+pnpm run check
+pnpm run test
+```
 
-Credit goes to [Sanni](https://github.com/sannidhishukla) for kicking off the conversation that led
-to this template repository.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for repository conventions and review expectations.
 
-## Disclaimer
+## License
 
-This project utilizes certain tools and technologies for development purposes. The inclusion of
-these tools does not imply endorsement or recommendation. Users are encouraged to evaluate the
-suitability of these tools for their own use.
+This project is licensed under the MIT license. For more information, see [LICENSE](LICENSE).
+
+## Contact
+
+If you want to get in touch with the New Jersey Innovation Authority team, please email
+[team@innovation.nj.gov](mailto:team@innovation.nj.gov).
+
+### Join the New Jersey Innovation Authority!
+
+If you are excited to design and deliver modern policies and services to improve the lives of all
+New Jerseyans, you should
+[join the New Jersey Innovation Authority](https://innovation.nj.gov/join.html).

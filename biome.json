@@ -8,7 +8,9 @@
       "!pnpm-lock.yaml",
       "!yarn.lock",
       "!bun.lockb",
-      "!.claude"
+      "!.claude",
+      "!dist",
+      "!.astro"
     ]
   },
   "formatter": {
@@ -21,7 +23,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "complexity": {
         "noForEach": "error",
         "useArrowFunction": "error",
@@ -42,18 +44,18 @@
         "useImportType": "error",
         "useNodejsImportProtocol": "error",
         "useTemplate": "error",
-        "useThrowOnlyError": "error"
+        "useThrowOnlyError": "error",
+        "useErrorCause": "error"
       },
       "suspicious": {
         "noConsole": "error",
         "noExplicitAny": "error",
         "noImportCycles": "error",
-        "noVar": "error"
+        "noVar": "error",
+        "noNestedPromises": "error"
       },
       "nursery": {
-        "noFloatingPromises": "error",
-        "noNestedPromises": "error",
-        "useErrorCause": "error"
+        "noFloatingPromises": "error"
       }
     }
   },
